@@ -7,6 +7,19 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+    <script type="text/javascript">
+        document.onkeydown = function(e){
+            if(e.ctrlKey && e.keyCode === 85){
+                alert('Error! Cannot use Ctrl+u');
+                return false;
+            }else if(e.keyCode === 123){
+                alert('Error! Cannot use F12');
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,14 +40,14 @@ and open the template in the editor.
                     border-radius: 5px;
                 }
                 p {
-                    font-size: 15px;
+                    font-size: 20px;
                     font-weight: 200;
                 }
 
                 footer {
                     background-color: Black;
                     color: white;
-                    padding: 15px;
+                    padding: 10px;
                     position: absolute;
                     bottom: 0;
                     width: 100%;
@@ -54,15 +67,24 @@ and open the template in the editor.
                     margin-top:  50px;
                     display: block;
                 }
+                
+                body, html{
+                    height: 100%;
+                    width: 100%;
+                }
+                
+                strong{
+                    font-size: 20px;
+                }
 
             }
 
         </style>
     </head>
-    <body>
+    <body oncontextmenu="return false">
         <form action="nataslevel2.php" method="post">
             <header class="container-fluid text-center">
-                <p>NATAS</p>
+                <p>Black Box Challenge</p>
             </header>
 
             <div class="container-fluid">    
@@ -73,7 +95,7 @@ and open the template in the editor.
                             <h1>NATAS Level 2</h1>
                         </div>
                         <label>Username</label>
-                        <input type="text" size="30"name="username"><br>
+                        <input type="text" size="30" name="username"><br>
 
                         <label>Password</label>
                         <input type="password" size="30" name="password"><br>
@@ -81,8 +103,11 @@ and open the template in the editor.
                         <label>&nbsp;</label>
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                         <br><br><br>
+                        <strong>Challenge Prompt:</strong>
                         <p>
-                            Challenge Prompt: 
+                            Username is natas2.
+                            Hint: The password is somewhere on this page, but 
+                            certain functions have been disabled.
                         </p>
                     </div>
 
@@ -92,6 +117,7 @@ and open the template in the editor.
         <footer class="container-fluid text-center">
             <p>Created by Marshall University 
                 Department of Computer Science - 2018</p>
+            <!--<p>The password for natas2 is <?php include 'nataslevel2.php'; echo $natas2_password;?></p>-->
         </footer>
     </body>
 </html>

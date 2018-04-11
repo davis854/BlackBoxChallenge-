@@ -7,6 +7,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+   
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,9 +26,10 @@ and open the template in the editor.
                     height: 30px;
                     border-style: groove;
                     border-radius: 5px;
+                    
                 }
                 p {
-                    font-size: 15px;
+                    font-size: 20px;
                     font-weight: 200;
                 }
 
@@ -54,6 +56,20 @@ and open the template in the editor.
                     margin-top:  50px;
                     display: block;
                 }
+                
+                #password {
+                    margin-left: 300px;
+                    margin-right: 500px;
+                }
+                
+                body,html{
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                strong{
+                    font-size: 20px;
+                }
 
             }
 
@@ -62,7 +78,7 @@ and open the template in the editor.
     <body>
         <form action="nataslevel4.php" method="post">
             <header class="container-fluid text-center">
-                <p>NATAS</p>
+                <p>Black Box Challenge</p>
             </header>
 
             <div class="container-fluid">    
@@ -81,13 +97,25 @@ and open the template in the editor.
                         <label>&nbsp;</label>
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                         <br><br><br>
+                        <strong>Challenge Prompt:</strong>
                         <p>
-                            Challenge Prompt: 
+                            The username is natas4.
+                            You can find the password somewhere in a URL. 
                         </p>
                     </div>
 
                 </div>
             </div> 
+        </form>
+        
+        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="GET">
+            <div id="password">
+                <input type="hidden" name="string" value="<?php include
+                                'nataslevel4.php';
+                        echo $natas4_password?>">
+                <input type="submit" value="What is in here? Find out!">
+                
+            </div>
         </form>
         <footer class="container-fluid text-center">
             <p>Created by Marshall University 

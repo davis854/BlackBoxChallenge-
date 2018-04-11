@@ -3,7 +3,9 @@
 include 'sessions.php';
 
 $natas4_username = 'natas4';
-$natas4_password = "";
+$natas4_password = 'natas4';
+
+
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($_POST['username'] === $natas4_username && $_POST['password'] === $natas4_password) {

@@ -27,7 +27,7 @@ and open the template in the editor.
                     border-radius: 5px;
                 }
                 p {
-                    font-size: 15px;
+                    font-size: 20px;
                     font-weight: 200;
                 }
 
@@ -54,6 +54,11 @@ and open the template in the editor.
                     margin-top:  50px;
                     display: block;
                 }
+                
+                body,html{
+                    width: 100%;
+                    height: 100%;
+                }
 
             }
 
@@ -62,7 +67,7 @@ and open the template in the editor.
     <body>
         <form action="nataslevel5.php" method="post">
             <header class="container-fluid text-center">
-                <p>NATAS</p>
+                <p>Black Box Challenge</p>
             </header>
 
             <div class="container-fluid">    
@@ -81,8 +86,11 @@ and open the template in the editor.
                         <label>&nbsp;</label>
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                         <br><br><br>
+                        <strong>Challenge Prompt:</strong>
                         <p>
-                            Challenge Prompt: 
+                            The username is natas5.
+                            The password is in a secret directory. 
+                            Hint: The directory "Files" is possible. You figure it out. 
                         </p>
                     </div>
 
